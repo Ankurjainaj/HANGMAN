@@ -10,7 +10,7 @@ def game():
     ascii="abcdefghijklmnopqrstuvwxyz"
     last=""
     hyphens_empty = ""
-    word_list = ['python', 'java', 'kotlin', 'javascript', 'consortium', 'covid', 'pendemonium', 'oracle', 'unacademy', 'copycat']
+    word_list = ['python', 'java', 'kotlin', 'javascript', 'consortium', 'covid', 'pendemonium', 'oracle', 'unacademy', 'copycat','obliterate', 'occlusion', 'locust', 'campaign', 'pulverizer', 'punisher','suplex','science','meticulous', 'adelaide', 'incentive', 'seduction', 'gratitude', 'opportunity', 'commitment', 'foundation', 'organisation', 'doubting', 'introvert', 'escapist', 'comparison', 'discipline', 'unrealistic', 'confusing', 'evaluation', 'difference', 'interest', 'sincerity', 'argumentative', 'flattery', 'openness', 'reliability', 'integrity', 'obscenity', 'manifestation', 'distorted', 'pleasure', 'exposure', 'pessimistic', 'positive', 'boomerang', 'manners', 'charming', 'automatically', 'firmness', 'quarrel', 'frequently', 'delinquent', 'rationality', 'handicapped', 'economy', 'courteous']
     tries = 8
     random_word = random.choice(word_list)
     random_word_list = list(random_word)
@@ -18,7 +18,7 @@ def game():
     while tries != 0 and hyphens!=random_word_list:
         print("")
         print(hyphens_empty.join(hyphens))
-        user_input = input("Input a letter: ")
+        user_input = str.lower(input("Input a letter: "))
         if user_input in random_word_list and user_input not in hyphens:
             ind = random_word_list.index(user_input)
             del hyphens[ind]
